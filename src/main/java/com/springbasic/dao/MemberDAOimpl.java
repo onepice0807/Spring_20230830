@@ -1,5 +1,7 @@
 package com.springbasic.dao;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
@@ -34,6 +36,12 @@ public class MemberDAOimpl implements MemberDAO {
 		
 		String q = ns + ".getMemberByUserId";
 		return ses.selectOne(q, userId);
+	}
+
+	@Override
+	public List<Member> selsectAllMembers() {
+		String q = ns + ".getAllMembers";
+		return ses.selectList(q);
 	}
 
 }

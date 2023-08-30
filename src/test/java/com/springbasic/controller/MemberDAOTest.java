@@ -1,5 +1,7 @@
 package com.springbasic.controller;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.junit.Test;
@@ -28,10 +30,20 @@ public class MemberDAOTest {
 //		System.out.println(mdao.selectMemberByUserId("ray1234").toString());
 //	}
 		
+//	@Test
+//	public void testInsertMember() {
+//		Member m = new Member("new", "1234", "new", null, 0, 0, null, null);
+//		mdao.insertMember(m);
+//		
+//	}
+	
 	@Test
-	public void testInsertMember() {
-		Member m = new Member("new", "1234", "new", null, 0, 0, null, null);
-		mdao.insertMember(m);
+	public void testSelectAllMember() {
+		List<Member> lst = mdao.selsectAllMembers();
+		
+		for (Member m : lst) {
+		System.out.println(m);
+	}
 		
 	}
 	

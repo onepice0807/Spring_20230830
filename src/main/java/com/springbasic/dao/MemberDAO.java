@@ -1,5 +1,7 @@
 package com.springbasic.dao;
 
+import java.util.List;
+
 import com.springbasic.vo.Member;
 
 public interface MemberDAO {
@@ -11,4 +13,6 @@ public interface MemberDAO {
 	
 	
 	public Member selectMemberByUserId(String userId);
+	
+	public List<Member> selsectAllMembers();
 }

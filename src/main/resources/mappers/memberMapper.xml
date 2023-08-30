@@ -18,5 +18,8 @@
 							values(#{userId},sha1(md5(#{userPwd})),#{userEmail})
 </insert>
 
+<select id="getAllMembers" resultType="com.springbasic.vo.Member">
+	select * from ray.member
+</select>
 
 </mapper>

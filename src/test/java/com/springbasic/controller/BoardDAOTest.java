@@ -9,42 +9,42 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.springbasic.dao.MemberDAO;
-import com.springbasic.vo.Member;
+import com.springbasic.dao.BoardDAO;
+import com.springbasic.vo.Board;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
 locations = {"file:src/main/webapp/WEB-INF/spring/**/root-context.xml"})
-public class MemberDAOTest {
+public class BoardDAOTest {
 	
 	@Inject
-	private MemberDAO mdao;
+	private BoardDAO mdao;
 	
 //	@Test
 //	public void testGetDate() {
 //	System.out.println(mdao.getDate());
 //	}
-	
-	@Test
-	public void testGetMember() {
-		System.out.println(mdao.selectMemberByUserId("ray1234").toString());
-	}
-		
-//	@Test
-//	public void testInsertMember() {
-//		Member m = new Member("new", "1234", "new", null, 0, 0, null, null);
-//		mdao.insertMember(m);
-//		
-//	}
-	
-//	@Test
-//	public void testSelectAllMember() {
-//		List<Member> lst = mdao.selsectAllMembers();
-//		
-//		for (Member m : lst) {
-//		System.out.println(m);
-//	}
-//		
-//	}
 //	
+//	@Test
+//	public void testGetBoard() {
+//		System.out.println(mdao.selectBoardByNo(27));
+//
+//	}
+		
+	@Test
+	public void testInsertBoard() {
+		Board b = new Board(53, "ray1234", "스프링으로 연습합니다", null, "스프링으로 연습합니다", 0, 0, 0, 0, 0, "N");
+		mdao.insertBoard(b);
+		
+	}
+	
+//	@Test
+//	public void testSelectAllBoard() {
+//		List<Board> lst = mdao.selsectAllBoard();
+//		for (Board b : lst) {
+//		System.out.println(b);
+//	}
+//		
+//	}
+	
 }

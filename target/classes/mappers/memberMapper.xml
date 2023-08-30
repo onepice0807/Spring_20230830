@@ -22,4 +22,5 @@
 	select * from ray.member
 </select>
 
+
 </mapper>
